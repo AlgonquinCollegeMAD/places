@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+  
+  var listOfPlaces = Provider.shared.allPlaces() 
+  
+  var body: some View {
+    List(listOfPlaces) { place in
+      Text(place.name)
     }
+      .padding()
+  }
 }
 
 #Preview {
-    ContentView()
+  ContentView()
 }

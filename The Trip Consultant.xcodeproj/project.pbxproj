@@ -14,6 +14,8 @@
 		10972AC12ACB61FB00F4563A /* The_Trip_ConsultantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10972AC02ACB61FB00F4563A /* The_Trip_ConsultantTests.swift */; };
 		10972ACB2ACB61FB00F4563A /* The_Trip_ConsultantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10972ACA2ACB61FB00F4563A /* The_Trip_ConsultantUITests.swift */; };
 		10972ACD2ACB61FB00F4563A /* The_Trip_ConsultantUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10972ACC2ACB61FB00F4563A /* The_Trip_ConsultantUITestsLaunchTests.swift */; };
+		10972ADA2ACB62ED00F4563A /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10972AD92ACB62ED00F4563A /* Provider.swift */; };
+		10972ADC2ACB635900F4563A /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10972ADB2ACB635900F4563A /* Place.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		10972AC62ACB61FB00F4563A /* The Trip ConsultantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Trip ConsultantUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10972ACA2ACB61FB00F4563A /* The_Trip_ConsultantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Trip_ConsultantUITests.swift; sourceTree = "<group>"; };
 		10972ACC2ACB61FB00F4563A /* The_Trip_ConsultantUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Trip_ConsultantUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		10972AD92ACB62ED00F4563A /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		10972ADB2ACB635900F4563A /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				10972AB22ACB61FB00F4563A /* Assets.xcassets */,
 				10972AB42ACB61FB00F4563A /* The_Trip_Consultant.entitlements */,
 				10972AB52ACB61FB00F4563A /* Preview Content */,
+				10972AD92ACB62ED00F4563A /* Provider.swift */,
+				10972ADB2ACB635900F4563A /* Place.swift */,
 			);
 			path = "The Trip Consultant";
 			sourceTree = "<group>";
@@ -260,7 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				10972AB12ACB61FA00F4563A /* ContentView.swift in Sources */,
+				10972ADA2ACB62ED00F4563A /* Provider.swift in Sources */,
 				10972AAF2ACB61FA00F4563A /* The_Trip_ConsultantApp.swift in Sources */,
+				10972ADC2ACB635900F4563A /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
