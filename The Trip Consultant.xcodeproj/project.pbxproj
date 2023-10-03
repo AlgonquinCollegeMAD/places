@@ -16,6 +16,7 @@
 		10972ACD2ACB61FB00F4563A /* The_Trip_ConsultantUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10972ACC2ACB61FB00F4563A /* The_Trip_ConsultantUITestsLaunchTests.swift */; };
 		10972ADA2ACB62ED00F4563A /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10972AD92ACB62ED00F4563A /* Provider.swift */; };
 		10972ADC2ACB635900F4563A /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10972ADB2ACB635900F4563A /* Place.swift */; };
+		10972ADE2ACC665C00F4563A /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10972ADD2ACC665C00F4563A /* PlaceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		10972ACC2ACB61FB00F4563A /* The_Trip_ConsultantUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Trip_ConsultantUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		10972AD92ACB62ED00F4563A /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		10972ADB2ACB635900F4563A /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		10972ADD2ACC665C00F4563A /* PlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				10972AAE2ACB61FA00F4563A /* The_Trip_ConsultantApp.swift */,
 				10972AB02ACB61FA00F4563A /* ContentView.swift */,
+				10972ADD2ACC665C00F4563A /* PlaceView.swift */,
 				10972AB22ACB61FB00F4563A /* Assets.xcassets */,
 				10972AB42ACB61FB00F4563A /* The_Trip_Consultant.entitlements */,
 				10972AB52ACB61FB00F4563A /* Preview Content */,
@@ -267,6 +270,7 @@
 			files = (
 				10972AB12ACB61FA00F4563A /* ContentView.swift in Sources */,
 				10972ADA2ACB62ED00F4563A /* Provider.swift in Sources */,
+				10972ADE2ACC665C00F4563A /* PlaceView.swift in Sources */,
 				10972AAF2ACB61FA00F4563A /* The_Trip_ConsultantApp.swift in Sources */,
 				10972ADC2ACB635900F4563A /* Place.swift in Sources */,
 			);

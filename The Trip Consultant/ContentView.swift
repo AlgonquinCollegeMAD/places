@@ -15,12 +15,13 @@ struct ContentView: View {
     NavigationStack{
       List(listOfPlaces) { place in
         NavigationLink {
-          Text(place.name)
+          PlaceView(place: place)
         } label: {
-          HStack {
+          HStack {  
             Image(place.picture)
               .resizable()
-              .frame(width: 30, height: 30)
+              .frame(width: 90, height: 50
+              )
             Text(place.name)
           }
         }
