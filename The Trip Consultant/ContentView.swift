@@ -14,11 +14,15 @@ struct ContentView: View {
   var body: some View {
     NavigationStack{
       List(listOfPlaces) { place in
-        HStack {
-          Image(place.picture)
-            .resizable()
-            .frame(width: 30, height: 30)
+        NavigationLink {
           Text(place.name)
+        } label: {
+          HStack {
+            Image(place.picture)
+              .resizable()
+              .frame(width: 30, height: 30)
+            Text(place.name)
+          }
         }
       }
       .padding()
