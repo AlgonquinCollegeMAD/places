@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  The Trip Consultant
-//
-//  Created by Vladimir Cezar on 2023-10-02.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -12,26 +5,42 @@ struct ContentView: View {
   var listOfPlaces = Provider.shared.allPlaces().sorted { $0.name < $1.name }
   
   var body: some View {
-    NavigationStack{
-      List(listOfPlaces) { place in
-        NavigationLink {
-          PlaceView(place: place)
-        } label: {
-          HStack {  
-            Image(place.picture)
-              .resizable()
-              .frame(width: 90, height: 50
-              )
-            Text(place.name)
+    ZStack {
+      Color.cyan
+      NavigationStack{
+        List {
+          VStack {
+            ForEach(listOfPlaces) { place in
+              ZStack {
+                PlaceView(place: place)
+                  .padding()
+                  .background(Color.red)
+                  .cornerRadius(20.0)
+                  .padding(.bottom, 30
+                  )
+                
+                NavigationLink {
+                  Text(place.name)
+                } label: {
+                  EmptyView()
+                }.frame(width: 0).opacity(0)
+              }
+              .listStyle(.plain)
+               .listRowSeparator(.hidden)
+               .listRowBackground(Color.cyan)
+            }
           }
         }
+        .navigationTitle("Places")
+        .foregroundColor(.primary)
+        .listStyle(.plain)
       }
-      .padding()
-      .navigationTitle("Best places to visit")
     }
   }
 }
 
-#Preview {
-  ContentView()
+struct ContentView_Previews: PreviewProvider {
+  static var previews: some View {
+    ContentView()
+  }
 }
