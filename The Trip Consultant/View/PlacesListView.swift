@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ContentView: View {
+struct PlacesListView: View {
   
   var listOfPlaces = Provider.shared.allPlaces().sorted { $0.name < $1.name }
   
@@ -12,7 +12,7 @@ struct ContentView: View {
             VStack {
               ForEach(listOfPlaces) { place in
                 ZStack {
-                  PlaceView(place: place)
+                  PlaceCardView(place: place)
                     .padding()
                     .background(Color.secondary.opacity(0.2))
                     .cornerRadius(20.0)
@@ -39,6 +39,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView()
+    PlacesListView()
   }
 }

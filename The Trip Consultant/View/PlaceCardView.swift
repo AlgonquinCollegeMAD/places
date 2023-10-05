@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct PlaceView: View {
+struct PlaceCardView: View {
   var place: Place
   
   var body: some View {
@@ -42,7 +42,7 @@ struct PlaceView: View {
 #Preview {
   ZStack {
     Color.blue.edgesIgnoringSafeArea(.all)
-    PlaceView(place: Place(name:"Meteora",
+    PlaceCardView(place: Place(name:"Meteora",
                            picture: "meteora",
                            description: "Monastery complex",
                            country: "Greece",
