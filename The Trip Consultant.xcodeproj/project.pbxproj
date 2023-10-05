@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		106D57222ACF236F00926BA8 /* RatingsStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106D57212ACF236F00926BA8 /* RatingsStarView.swift */; };
+		107152EC2ACF63860095BE55 /* PlaceMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107152EB2ACF63860095BE55 /* PlaceMapView.swift */; };
 		10972AAF2ACB61FA00F4563A /* The_Trip_ConsultantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10972AAE2ACB61FA00F4563A /* The_Trip_ConsultantApp.swift */; };
 		10972AB12ACB61FA00F4563A /* PlacesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10972AB02ACB61FA00F4563A /* PlacesListView.swift */; };
 		10972AB32ACB61FB00F4563A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10972AB22ACB61FB00F4563A /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		106D57212ACF236F00926BA8 /* RatingsStarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsStarView.swift; sourceTree = "<group>"; };
+		107152EB2ACF63860095BE55 /* PlaceMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMapView.swift; sourceTree = "<group>"; };
 		10972AAB2ACB61FA00F4563A /* The Trip Consultant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Trip Consultant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10972AAE2ACB61FA00F4563A /* The_Trip_ConsultantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Trip_ConsultantApp.swift; sourceTree = "<group>"; };
 		10972AB02ACB61FA00F4563A /* PlacesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListView.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				10972AB02ACB61FA00F4563A /* PlacesListView.swift */,
+				107152EB2ACF63860095BE55 /* PlaceMapView.swift */,
 				10972ADD2ACC665C00F4563A /* PlaceCardView.swift */,
 				106D57212ACF236F00926BA8 /* RatingsStarView.swift */,
 			);
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10972AB12ACB61FA00F4563A /* PlacesListView.swift in Sources */,
+				107152EC2ACF63860095BE55 /* PlaceMapView.swift in Sources */,
 				10972ADA2ACB62ED00F4563A /* Provider.swift in Sources */,
 				10972ADE2ACC665C00F4563A /* PlaceCardView.swift in Sources */,
 				10972AAF2ACB61FA00F4563A /* The_Trip_ConsultantApp.swift in Sources */,
