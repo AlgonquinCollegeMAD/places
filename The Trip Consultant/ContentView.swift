@@ -7,34 +7,32 @@ struct ContentView: View {
   var body: some View {
     ZStack {
       Color.cyan
-      NavigationStack{
-        List {
-          VStack {
-            ForEach(listOfPlaces) { place in
-              ZStack {
-                PlaceView(place: place)
-                  .padding()
-                  .background(Color.red)
-                  .cornerRadius(20.0)
-                  .padding(.bottom, 30
-                  )
-                
-                NavigationLink {
-                  Text(place.name)
-                } label: {
-                  EmptyView()
-                }.frame(width: 0).opacity(0)
+        NavigationStack{
+          List {
+            VStack {
+              ForEach(listOfPlaces) { place in
+                ZStack {
+                  PlaceView(place: place)
+                    .padding()
+                    .background(Color.secondary.opacity(0.2))
+                    .cornerRadius(20.0)
+                    .padding(.bottom, 30)
+                    
+        
+                  NavigationLink {
+                    Text(place.name)
+                  } label: {
+                    EmptyView()
+                  }.frame(width: 0).opacity(0)
+                }
+                 .listRowSeparator(.hidden)
               }
-              .listStyle(.plain)
-               .listRowSeparator(.hidden)
-               .listRowBackground(Color.cyan)
             }
           }
+          .navigationTitle("Places")
+          .foregroundColor(.primary)
+          .listStyle(.plain)
         }
-        .navigationTitle("Places")
-        .foregroundColor(.primary)
-        .listStyle(.plain)
-      }
     }
   }
 }
