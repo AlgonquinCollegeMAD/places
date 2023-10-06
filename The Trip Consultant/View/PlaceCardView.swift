@@ -42,12 +42,18 @@ struct PlaceCardView: View {
 #Preview {
   ZStack {
     Color.blue.edgesIgnoringSafeArea(.all)
-    PlaceCardView(place: Place(name:"Meteora",
-                           picture: "meteora",
-                           description: "Monastery complex",
-                           country: "Greece",
-                           ratings: 2.8, reviews: 800, comment: "Spiritual retreat!")
-            
+    PlaceCardView(
+      place: Place(
+        name: "Bali",
+        picture: "bali",
+        description: "Island paradise",
+        country: "Indonesia",
+        ratings: 3.8,
+        reviews: 1050,
+        comment: "Tropical escape!",
+        latitude: -8.409,
+        longitude: 115.190
+      )
     ).padding()
   }
 }

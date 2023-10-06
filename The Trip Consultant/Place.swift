@@ -9,4 +9,6 @@ struct Place: Identifiable {
   var ratings: Double
   var reviews: Int
   var comment: String?
+  var latitude: Double
+  var longitude: Double
 }

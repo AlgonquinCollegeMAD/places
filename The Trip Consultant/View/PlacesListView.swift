@@ -25,7 +25,7 @@ struct PlacesListView: View {
               .background(Color.secondary.opacity(0.2))
               .cornerRadius(20.0)
               .background(
-                NavigationLink("", destination: Text(place.name)).opacity(0.0)
+                NavigationLink("", destination: PlaceMapView(place: place)).opacity(0.0)
               )
               .listRowSeparator(.hidden)
           }
