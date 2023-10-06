@@ -20,15 +20,14 @@ struct PlacesListView: View {
       NavigationStack {
         List {
           ForEach(listOfPlaces) { place in
-            NavigationLink {
-              Text(place.name)
-            } label: {
-              PlaceCardView(place: place)
-                .padding()
-                .background(Color.secondary.opacity(0.2))
-                .cornerRadius(20.0)
-            }
-            .listRowSeparator(.hidden)
+            PlaceCardView(place: place)
+              .padding()
+              .background(Color.secondary.opacity(0.2))
+              .cornerRadius(20.0)
+              .background(
+                NavigationLink("", destination: Text(place.name)).opacity(0.0)
+              )
+              .listRowSeparator(.hidden)
           }
         }
         .navigationTitle("Places")
