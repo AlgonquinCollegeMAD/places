@@ -3,7 +3,7 @@ import MapKit
 
 struct PlaceMapView: View {
   
-  var place: Place
+  @State var place: Place
   
   var body: some View {
     NavigationStack {
@@ -16,7 +16,11 @@ struct PlaceMapView: View {
               .font(.subheadline)
           }
           Spacer()
-          Image(systemName: "star")
+          Button(action: {
+            place.isBokmarked.toggle()
+          }, label: {
+            Image(systemName: (place.isBokmarked ? "bookmark.fill" : "bookmark"))
+          })
         }
         
       }
@@ -38,6 +42,7 @@ struct PlaceMapView: View {
 #Preview {
   PlaceMapView(
     place: Place(
+      id: 0,
       name: "Christ the Redeemer",
       picture: "christ-redeemer",
       description: "Iconic statue in Rio de Janeiro.",

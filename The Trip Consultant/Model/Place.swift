@@ -11,4 +11,5 @@ struct Place: Identifiable {
   var comment: String?
   var latitude: Double
   var longitude: Double
+  var isBokmarked: Bool = false
 }

@@ -8,8 +8,18 @@ struct PlaceCardView: View {
       Image(place.picture)
         .resizable()
         .frame(height: 200)
-        .background(Color.red)
         .cornerRadius(20.0)
+        .overlay(alignment: .topLeading) {
+          if place.isBokmarked {
+            Image(systemName: "bookmark.fill")
+              .resizable()
+              .foregroundColor(.red).opacity(0.8)
+              .aspectRatio(contentMode: .fit)
+              .frame(width: 40, height: 40)
+              .padding(.top, 8)
+              .shadow(radius: 5)
+          }
+        }
       
       HStack {
         Text(place.name)
@@ -44,6 +54,7 @@ struct PlaceCardView: View {
     Color.blue.edgesIgnoringSafeArea(.all)
     PlaceCardView(
       place: Place(
+        id: 0,
         name: "Bali",
         picture: "bali",
         description: "Island paradise",
@@ -52,7 +63,8 @@ struct PlaceCardView: View {
         reviews: 1050,
         comment: "Tropical escape!",
         latitude: -8.409,
-        longitude: 115.190
+        longitude: 115.190,
+        isBokmarked: true
       )
     ).padding()
   }
