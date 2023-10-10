@@ -1,7 +1,7 @@
 import Foundation
 
 struct Place: Identifiable {
-  var id = UUID()
+  var id:  Int
   var name: String
   var picture: String
   var description: String
