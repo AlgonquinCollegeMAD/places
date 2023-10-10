@@ -118,8 +118,8 @@
 			children = (
 				10972AAE2ACB61FA00F4563A /* The_Trip_ConsultantApp.swift */,
 				107152EA2ACF5E1D0095BE55 /* View */,
-				10972AD92ACB62ED00F4563A /* Provider.swift */,
-				10972ADB2ACB635900F4563A /* Place.swift */,
+				10C5127D2AD5BA6400331FC7 /* Provider */,
+				10C5127E2AD5BA7800331FC7 /* Model */,
 				10972AB22ACB61FB00F4563A /* Assets.xcassets */,
 				10972AB42ACB61FB00F4563A /* The_Trip_Consultant.entitlements */,
 				10972AB52ACB61FB00F4563A /* Preview Content */,
@@ -150,6 +150,22 @@
 				10972ACC2ACB61FB00F4563A /* The_Trip_ConsultantUITestsLaunchTests.swift */,
 			);
 			path = "The Trip ConsultantUITests";
+			sourceTree = "<group>";
+		};
+		10C5127D2AD5BA6400331FC7 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				10972AD92ACB62ED00F4563A /* Provider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		10C5127E2AD5BA7800331FC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				10972ADB2ACB635900F4563A /* Place.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

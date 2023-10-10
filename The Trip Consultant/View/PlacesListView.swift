@@ -10,7 +10,6 @@ struct PlacesListView: View {
         ProgressView()
         Text("Loading data...")
           .onAppear() {
-            print("SHOW")
 //            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
               listOfPlaces = Provider.shared.allPlaces().sorted { $0.name < $1.name }
 //            }
