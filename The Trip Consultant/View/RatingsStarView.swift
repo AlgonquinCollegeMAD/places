@@ -3,19 +3,15 @@ import SwiftUI
 struct RatingsStarView: View {
   var rating: Double
   var stars: (Int, Int) {
-    let whole = rating.rounded(.down)
-    let fractional = (rating - whole)
-    
-    var numberOfHalfStars: Int = (0.3..<0.8).contains(fractional) ? 1 : 0
-    var numberOfFullStars = whole
-    
-    if fractional >= 0.8 {
-      numberOfFullStars = numberOfFullStars + 1
-      numberOfHalfStars = 0
-    }
-    
-    return (Int(numberOfFullStars), numberOfHalfStars)
+      let whole = Int(rating)
+      let fractional = rating - Double(whole)
+      
+      let numberOfHalfStars = (0.3..<0.8).contains(fractional) ? 1 : 0
+      let numberOfFullStars = fractional >= 0.8 ? whole + 1 : whole
+      
+      return (numberOfFullStars, numberOfHalfStars)
   }
+
   
   var body: some View {
     HStack {
