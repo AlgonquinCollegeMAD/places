@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct PlaceCardView: View {
-  var place: Place
+  @Binding var place: Place
   
   var body: some View {
     VStack {
@@ -46,26 +46,5 @@ struct PlaceCardView: View {
           .font(.system(size: 14))
       }
     }
-  }
-}
-
-#Preview {
-  ZStack {
-    Color.blue.edgesIgnoringSafeArea(.all)
-    PlaceCardView(
-      place: Place(
-        id: 0,
-        name: "Bali",
-        picture: "bali",
-        description: "Island paradise",
-        country: "Indonesia",
-        ratings: 3.8,
-        reviews: 1050,
-        comment: "Tropical escape!",
-        latitude: -8.409,
-        longitude: 115.190,
-        isBokmarked: true
-      )
-    ).padding()
   }
 }

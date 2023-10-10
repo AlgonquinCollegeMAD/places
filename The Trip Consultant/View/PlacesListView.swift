@@ -2,29 +2,24 @@ import SwiftUI
 
 struct PlacesListView: View {
   
-  @State var listOfPlaces = [Place]()
+  @ObservedObject var model = PlacesListViewModel()
   
   var body: some View {
-    if listOfPlaces.count == 0 {
+    if model.list.count == 0 {
       VStack {
         ProgressView()
         Text("Loading data...")
-          .onAppear() {
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-              listOfPlaces = Provider.shared.allPlaces().sorted { $0.name < $1.name }
-//            }
-          }
       }
     } else {
       NavigationStack {
         List {
-          ForEach(listOfPlaces) { place in
-            PlaceCardView(place: place)
+          ForEach(model.list.indices, id: \.self) { index in
+            PlaceCardView(place: $model.list[index])
               .padding()
               .background(Color.secondary.opacity(0.2))
               .cornerRadius(20.0)
               .background(
-                NavigationLink("", destination: PlaceMapView(place: place)).opacity(0.0)
+                NavigationLink("", destination: PlaceMapView(place: $model.list[index])).opacity(0.0)
               )
               .listRowSeparator(.hidden)
           }

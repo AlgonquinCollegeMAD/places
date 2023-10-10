@@ -3,7 +3,7 @@ import MapKit
 
 struct PlaceMapView: View {
   
-  @State var place: Place
+  @Binding var place: Place
   
   var body: some View {
     NavigationStack {
@@ -37,21 +37,4 @@ struct PlaceMapView: View {
       }
     }
   }
-}
-
-#Preview {
-  PlaceMapView(
-    place: Place(
-      id: 0,
-      name: "Christ the Redeemer",
-      picture: "christ-redeemer",
-      description: "Iconic statue in Rio de Janeiro.",
-      country: "Brazil",
-      ratings: 4.7,
-      reviews: 1100,
-      comment: "Overlooking a beautiful city.",
-      latitude: -22.951,
-      longitude: -43.210
-    )
-  )
 }

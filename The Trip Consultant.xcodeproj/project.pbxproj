@@ -19,6 +19,7 @@
 		10972ADA2ACB62ED00F4563A /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10972AD92ACB62ED00F4563A /* Provider.swift */; };
 		10972ADC2ACB635900F4563A /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10972ADB2ACB635900F4563A /* Place.swift */; };
 		10972ADE2ACC665C00F4563A /* PlaceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10972ADD2ACC665C00F4563A /* PlaceCardView.swift */; };
+		10C512802AD5EC3200331FC7 /* PlacesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5127F2AD5EC3200331FC7 /* PlacesListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		10972AD92ACB62ED00F4563A /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		10972ADB2ACB635900F4563A /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		10972ADD2ACC665C00F4563A /* PlaceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCardView.swift; sourceTree = "<group>"; };
+		10C5127F2AD5EC3200331FC7 /* PlacesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				10972AB02ACB61FA00F4563A /* PlacesListView.swift */,
+				10C5127F2AD5EC3200331FC7 /* PlacesListViewModel.swift */,
 				107152EB2ACF63860095BE55 /* PlaceMapView.swift */,
 				10972ADD2ACC665C00F4563A /* PlaceCardView.swift */,
 				106D57212ACF236F00926BA8 /* RatingsStarView.swift */,
@@ -302,6 +305,7 @@
 				107152EC2ACF63860095BE55 /* PlaceMapView.swift in Sources */,
 				10972ADA2ACB62ED00F4563A /* Provider.swift in Sources */,
 				10972ADE2ACC665C00F4563A /* PlaceCardView.swift in Sources */,
+				10C512802AD5EC3200331FC7 /* PlacesListViewModel.swift in Sources */,
 				10972AAF2ACB61FA00F4563A /* The_Trip_ConsultantApp.swift in Sources */,
 				10972ADC2ACB635900F4563A /* Place.swift in Sources */,
 				106D57222ACF236F00926BA8 /* RatingsStarView.swift in Sources */,
