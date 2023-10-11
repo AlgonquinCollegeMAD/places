@@ -14,14 +14,22 @@ struct PlacesListView: View {
       NavigationStack {
         List {
           ForEach(model.list.indices, id: \.self) { index in
-            PlaceCardView(place: $model.list[index])
-              .padding()
-              .background(Color.secondary.opacity(0.2))
-              .cornerRadius(20.0)
-              .background(
-                NavigationLink("", destination: PlaceMapView(place: $model.list[index])).opacity(0.0)
-              )
-              .listRowSeparator(.hidden)
+            GeometryReader { geometry in
+              PlaceCardView(place: $model.list[index])
+                .padding()
+                .background(Color.secondary.opacity(0.2))
+                .cornerRadius(20.0)
+                .background(
+                  NavigationLink("", destination: PlaceMapView(place: $model.list[index])).opacity(0.0)
+                )
+                .rotation3DEffect(
+                  Angle(degrees: getDelta(geometry: geometry)),
+                  axis: (x: 1.0, y: 0.0, z: 0.0)
+                )
+            }
+            .frame(height: 390)
+            .listRowBackground(Color.clear)
+            .listRowSeparator(.hidden)
           }
         }
         .navigationTitle("Places")
@@ -29,6 +37,12 @@ struct PlacesListView: View {
         .listStyle(.plain)
       }
     }
+  }
+  
+  func getDelta(geometry: GeometryProxy) -> Double {
+    let height = UIScreen.main.bounds.height
+    let position = geometry.frame(in: .global).midY
+    return (60 * position / height) - 30.0
   }
 }
 
