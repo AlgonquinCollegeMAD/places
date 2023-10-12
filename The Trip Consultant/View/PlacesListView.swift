@@ -26,6 +26,7 @@ struct PlacesListView: View {
                   Angle(degrees: getDelta(geometry: geometry)),
                   axis: (x: 1.0, y: 0.0, z: 0.0)
                 )
+                .opacity(getDeltaOpacity(geometry: geometry))
             }
             .frame(height: 390)
             .listRowBackground(Color.clear)
@@ -43,6 +44,12 @@ struct PlacesListView: View {
     let height = UIScreen.main.bounds.height
     let position = geometry.frame(in: .global).midY
     return (60 * position / height) - 30.0
+  }
+  
+  func getDeltaOpacity(geometry: GeometryProxy) -> Double {
+    let height = UIScreen.main.bounds.height
+    let position = geometry.frame(in: .global).midY
+    return Double(sin(Float(position * Double.pi / height)))
   }
 }
 
