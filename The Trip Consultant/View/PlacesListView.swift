@@ -2,7 +2,7 @@ import SwiftUI
 
 struct PlacesListView: View {
   
-  @ObservedObject var model = PlacesListViewModel()
+  @ObservedObject var model = PlacesListViewModel(strategy: .byName)
   
   var body: some View {
     if model.list.count == 0 {
@@ -12,17 +12,10 @@ struct PlacesListView: View {
       }
     } else {
       NavigationStack {
-        
         Button {
-          model.sortByName()
+          model.change(strategy: model.strategy.nextStrategy)
         } label: {
-          Text("Sort by name")
-        }
-        
-        Button {
-          model.sortByCountry()
-        } label: {
-          Text("Sort by country")
+          Text(model.strategy.nextStrategy.label)
         }
 
         List {
