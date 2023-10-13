@@ -2,7 +2,7 @@ import SwiftUI
 
 struct PlacesListView: View {
   
-  @ObservedObject var model = PlacesListViewModel(strategy: .byName)
+  @ObservedObject var model = PlacesListViewModel()
   
   var body: some View {
     if model.list.count == 0 {
@@ -12,10 +12,11 @@ struct PlacesListView: View {
       }
     } else {
       NavigationStack {
-        Button {
-          model.change(strategy: model.strategy.nextStrategy)
-        } label: {
-          Text(model.strategy.nextStrategy.label)
+        Picker("Sort strategy", selection: $model.strategy) {
+          ForEach(SortStrategy.allCases, id: \.self) { value in
+            Text(value.label)
+              .tag(value)
+          }
         }
 
         List {
@@ -42,6 +43,9 @@ struct PlacesListView: View {
         .navigationTitle("Places")
         .foregroundColor(.primary)
         .listStyle(.plain)
+      }
+      .onAppear() {
+        model.strategy = .byName
       }
     }
   }

@@ -1,15 +1,15 @@
 import Foundation
 
-enum SortStrategy {
+enum SortStrategy: CaseIterable {
   case byName
   case byCountry
   
   var label: String {
     switch self {
     case .byName:
-      return "Order by name"
+      return "By name"
     case .byCountry:
-      return "Order by country"
+      return "By country"
     }
   }
   
@@ -25,21 +25,18 @@ enum SortStrategy {
 
 class PlacesListViewModel: ObservableObject {
   @Published var list = [Place]()
-  @Published private(set) var strategy: SortStrategy
-  
-  init(strategy: SortStrategy) {
-    self.strategy = strategy
-    list = Provider.shared.allPlaces()
-    change(strategy: strategy)
+  var strategy: SortStrategy = .byName {
+    didSet {
+      switch strategy {
+      case .byName:
+        list.sort { $0.name < $1.name }
+      case .byCountry:
+        list.sort { $0.country < $1.country }
+      }
+    }
   }
   
-  func change(strategy: SortStrategy) {
-    switch strategy {
-    case .byName:
-      list.sort { $0.name < $1.name }
-    case .byCountry:
-      list.sort { $0.country < $1.country }
-    }
-    self.strategy = strategy
+  init() {
+    list = Provider.shared.allPlaces()
   }
 }
