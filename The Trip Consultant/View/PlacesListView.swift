@@ -12,6 +12,19 @@ struct PlacesListView: View {
       }
     } else {
       NavigationStack {
+        
+        Button {
+          model.sortByName()
+        } label: {
+          Text("Sort by name")
+        }
+        
+        Button {
+          model.sortByCountry()
+        } label: {
+          Text("Sort by country")
+        }
+
         List {
           ForEach(model.list.indices, id: \.self) { index in
             GeometryReader { geometry in
